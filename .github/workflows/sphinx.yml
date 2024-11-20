@@ -39,6 +39,7 @@ jobs:
         echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
         echo '\n.. todo:: konijn' >> source/overview.rst
         echo "$result" | sed 's/^/\n.. todo:: /' >> source/overview.rst
+        cat source/overview.rst
       continue-on-error: true
 
     - name: Build Sphinx documentation
