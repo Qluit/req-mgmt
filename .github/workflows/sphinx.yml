@@ -1,11 +1,11 @@
 name: Build Documentation
 
 on:
-  push:
   pull_request:
     paths:
       - 'docs/**' # Trigger on changes to the docs directory
   workflow_dispatch: # Allow manual triggering of the workflow from the Actions tab
+  push:
 
 permissions:
   id-token: write
@@ -30,7 +30,13 @@ jobs:
         sudo apt-get install -y graphviz
         sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 
+    - name: Modify a file before building
+      run: |
+        cd docs
+        echo '\n.. todo:: This is a dynamically added TODO' >> source/overview.rst
+
     - name: Check for missing needs links
+      id: needs
       run: |
         cd docs
         output=$(sphinx-build -b linkcheck -q source build 2>&1 1>/dev/null)
@@ -60,14 +66,16 @@ jobs:
         name: req-mgmt.pdf
         path: docs/build/latex/req-mgmt.pdf
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
-
     - name: Upload HTML artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: docs/build/html
 
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+      with:
+        artifact_name: github-pages
