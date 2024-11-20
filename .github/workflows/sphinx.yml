@@ -33,19 +33,13 @@ jobs:
     - name: Modify a file before building
       run: |
         cd docs
-        echo -e '\n.. todo:: This is a dynamically added TODO' >> source/overview.rst
+        echo -e '\n.. todo:: AAAThis is a dynamically added TODO' >> source/overview.rst
 
     - name: Check for missing needs links
       id: needs
       run: |
         cd docs
-        output=$(sphinx-build -b linkcheck -q source build 2>&1 1>/dev/null)
-        result=$(echo "$output" | grep '\[needs\]')
-        echo "$result" >> $GITHUB_OUTPUT
-        echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
-        echo -e '\n.. todo:: konijn' >> source/overview.rst
-        echo "$result" | sed 's/^/\n.. todo:: /' >> source/overview.rst
-        cat source/overview.rst
+        sphinx-build -b linkcheck -q source build 2>&1 | grep '\[needs\]' | sed 's/^/\n.. todo:: /'
       continue-on-error: true
 
     - name: Build Sphinx documentation
