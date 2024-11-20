@@ -34,9 +34,10 @@ jobs:
       run: |
         cd docs
         output=$(sphinx-build -b linkcheck -q source build)
-        result=$(echo "$output" | grep '\[needs\]') | sed 's/^/    /')
+        result=$(echo "$output" | grep '\[needs\]')
         echo "$result" >> $GITHUB_OUTPUT
         echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
+        echo "$result" | sed 's/^/\n.. todo:: /' >> source/overview.rst
       continue-on-error: true
 
     - name: Build Sphinx documentation
