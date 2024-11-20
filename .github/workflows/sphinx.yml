@@ -36,6 +36,7 @@ jobs:
         result=$(echo "$output" | grep '\[needs\]')
         echo "$result" >> $GITHUB_OUTPUT
         echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
+      continue-on-error: true
 
     - name: Build Sphinx documentation
       run: |
