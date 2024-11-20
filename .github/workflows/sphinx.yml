@@ -1,6 +1,7 @@
 name: Build Documentation
 
 on:
+  push:
   pull_request:
     paths:
       - 'docs/**' # Trigger on changes to the docs directory
@@ -33,13 +34,14 @@ jobs:
       run: |
         cd docs
         output=$(sphinx-build -b linkcheck -q source build)
-        result=$(echo "$output" | grep '\[needs\]')
+        result=$(echo "$output" | grep '\[needs\]') | sed 's/^/    /')
         echo "$result" >> $GITHUB_OUTPUT
         echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
       continue-on-error: true
 
     - name: Build Sphinx documentation
       run: |
+        cd docs
         make latexpdf
         make html
 
