@@ -33,7 +33,7 @@ jobs:
     - name: Check for missing needs links
       run: |
         cd docs
-        output=$(sphinx-build -b linkcheck -q source build)
+        output=$(sphinx-build -b linkcheck -q source build 2>&1 1>/dev/null)
         result=$(echo "$output" | grep '\[needs\]')
         echo "$result" >> $GITHUB_OUTPUT
         echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
