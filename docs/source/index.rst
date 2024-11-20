@@ -11,6 +11,11 @@ how to install the project in :ref:`installation`.
 
    This project might be under active development.
 
+To Do
+------
+
+.. todolist::
+   
 Contents
 --------
 
@@ -22,8 +27,3 @@ Contents
    implementations
    testcases
    usage
-
-To Do
-------
-
-.. todolist::

@@ -26,12 +26,6 @@ Detailed Requirements
 
   The product shall be user friendly for adults
 
-.. req:: The ghost product 
-  :id: R_ghost^3
-  :links: R_cheap
-
-  The product shall be spooky
-
 .. needimport:: cheap.json
 
   
