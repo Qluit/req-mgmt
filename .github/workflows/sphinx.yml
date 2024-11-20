@@ -36,10 +36,9 @@ jobs:
         echo -e '\n.. todo:: AAAThis is a dynamically added TODO' >> source/overview.rst
 
     - name: Check for missing needs links
-      id: needs
       run: |
         cd docs
-        sphinx-build -b linkcheck -q source build 2>&1 | grep '\[needs\]' | sed 's/^/\n.. todo:: /'
+        sphinx-build -b linkcheck -q source build 2>&1 | grep '\[needs\]' | sed 's/^/\n.. todo:: /' >> source/overview.rst
       continue-on-error: true
 
     - name: Build Sphinx documentation
