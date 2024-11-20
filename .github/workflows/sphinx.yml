@@ -33,7 +33,7 @@ jobs:
     - name: Modify a file before building
       run: |
         cd docs
-        echo '\n.. todo:: This is a dynamically added TODO' >> source/overview.rst
+        echo -e '\n.. todo:: This is a dynamically added TODO' >> source/overview.rst
 
     - name: Check for missing needs links
       id: needs
@@ -43,7 +43,7 @@ jobs:
         result=$(echo "$output" | grep '\[needs\]')
         echo "$result" >> $GITHUB_OUTPUT
         echo "Needs Link Check Results" >> $GITHUB_STEP_SUMMARY
-        echo '\n.. todo:: konijn' >> source/overview.rst
+        echo -e '\n.. todo:: konijn' >> source/overview.rst
         echo "$result" | sed 's/^/\n.. todo:: /' >> source/overview.rst
         cat source/overview.rst
       continue-on-error: true
