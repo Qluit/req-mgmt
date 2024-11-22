@@ -7,7 +7,16 @@ The overview below provides all kinds of insights into the requirements
 Traceability of my needs
 ------------------------
 
-.. needflow:: Traceability Graph
+.. needflow:: Traceability of all needs
+   :types: req, spec, impl, test
+
+Traceability of requirements and specifications
+------------------------------------------------
+
+.. needflow:: Traceability of requirements and specifications
+   :types: req, spec
+
+
 
 Amount of needs per type
 ------------------------

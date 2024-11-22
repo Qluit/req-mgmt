@@ -6,11 +6,11 @@ on_rtd = os.environ.get("READTHEDOCS") == "True"
 # -- Project information
 
 project = 'req-mgmt'
-copyright = '2023, Qluit'
+copyright = '2023-2024, Qluit'
 author = 'Bas'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.2'
+version = '0.2.0'
 
 # -- General configuration
 
@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.graphviz',
     'sphinx_needs',
+    'sphinxcontrib.test_reports',
     'sphinxcontrib.plantuml',
     'sphinx_tabs.tabs',
 ]

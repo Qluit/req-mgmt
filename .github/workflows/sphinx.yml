@@ -2,8 +2,8 @@ name: Build Documentation
 
 on:
   pull_request:
-    paths:
-      - 'docs/**' # Trigger on changes to the docs directory
+    branches:
+      - main
   workflow_dispatch: # Allow manual triggering of the workflow from the Actions tab
 
 permissions:
@@ -22,6 +22,13 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         pip install -r docs/requirements.txt
+        pip install -r software/bmi/requirements.txt
+
+    - name: Run the Python tests
+      run: |
+        cd software/bmi
+        pytest --junitxml=report.xml 
+      continue-on-error: true # Continue as we know at least one test is failing
 
     - name: Install Graphviz and LaTeX packages
       run: |
