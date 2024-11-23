@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test_bmi_calculator" errors="0" failures="1" tests="5" hostname="tbd" time="0.001" timestamp="2024-11-22T15:17:38Z">
+    <testcase classname="test_bmi_calculator.global" name="Normal BMI" time="0.000" status="run"/>
+    <testcase classname="test_bmi_calculator.global" name="Overweight BMI" time="0.000" status="run"/>
+    <testcase classname="test_bmi_calculator.global" name="Underweight BMI" time="0.000" status="run"/>
+    <testcase classname="test_bmi_calculator.global" name="Zero Height" time="0.000" status="run">
+      <failure message="calculate_bmi(70, 0), std::invalid_argument" type="REQUIRE_THROWS_AS">
+FAILED:
+  REQUIRE_THROWS_AS( calculate_bmi(70, 0), std::invalid_argument )
+at test_bmi_calculator.cpp:19
+      </failure>
+    </testcase>
+    <testcase classname="test_bmi_calculator.global" name="Negative Height" time="0.000" status="run"/>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+</testsuites>

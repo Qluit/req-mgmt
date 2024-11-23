@@ -132,6 +132,18 @@ Test Results of automated tests
 
 .. test-results:: ../../software/bmi/report.xml
 
+.. Test Results of automated tests from C++ version
+.. --------------------------------------------------
 
+.. These results are not used in the documentation
+
+.. .. test-results:: ../../software/bmi_cpp/report.xml
+
+.. Test Results of automated tests from Java version
+.. --------------------------------------------------
+
+.. These results are not used in the documentation
+
+.. .. test-results:: ../../software/bmi_java/target/surefire-reports/TEST-BMICalculatorTest.xml
 
 

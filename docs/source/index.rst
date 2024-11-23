@@ -1,8 +1,9 @@
-Welcome to the Requirements!
-===================================
+Documentation for the BMI calculator
+============================================
 
-This a requirements document for a non-existent product to serve as a 
-template for a requirements engineering project.
+This is the product documentation for a BMI calculator.
+It includes the requirements, specifications, implementations, and test cases.
+It is set up to serve as a template for a requirements engineering project.
 
 Check out the :doc:`usage` section for further information, including
 how to install the project in :ref:`installation`.
