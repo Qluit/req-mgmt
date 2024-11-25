@@ -10,7 +10,7 @@ copyright = '2023-2024, Qluit'
 author = 'Bas'
 
 release = '0.2'
-version = '0.2.1'
+version = '0.2.2'
 
 # -- General configuration
 

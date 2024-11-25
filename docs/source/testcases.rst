@@ -74,8 +74,8 @@ Detailed Test Cases
 
   A test to check if the height is valid.
 
-Test Cases with link to automated tests
-----------------------------------------
+Automated Test Cases with link to results
+-----------------------------------------
 
 .. test-case:: Overweight BMI
    :id: A_overweight

@@ -19,10 +19,7 @@ Detailed Specifications
   :links: R_version_controlled
   :style: yellow, blue_border
 
-  Use Git for version control of the BMI calculator
-  
-    * Using a specific style for this need and
-    * deliberately linking to a non-existing requirement
+  Use Git for version control of the BMI calculator (Using a specific style for this need)
   
 .. spec:: Create a command line tool for the BMI calculator
   :id: S_command_line
