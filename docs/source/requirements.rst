@@ -26,6 +26,13 @@ Detailed Requirements
     "Main Admin" as Admin
     "Compute BMI" as (Use)
     Admin --> (Install the application)
+  
+  .. mermaid::
+  
+    graph TD
+      A[Compute BMI] --> B{Is BMI computed?}
+      B -->|Yes| C[Use]
+      B -->|No| D[Install the application]
 
 .. req:: The product shall be version controlled
   :id: R_version_controlled

@@ -10,7 +10,7 @@ copyright = '2023-2024, Qluit'
 author = 'Bas'
 
 release = '0.2'
-version = '0.2.2'
+version = '0.2.3'
 
 # -- General configuration
 
@@ -25,6 +25,7 @@ extensions = [
     'sphinx_needs',
     'sphinxcontrib.test_reports',
     'sphinxcontrib.plantuml',
+    'sphinxcontrib.mermaid',
     'sphinx_tabs.tabs',
 ]
 
