@@ -35,7 +35,17 @@ Activate the environment for your platform first
          activate.bat
 
 Then build the documentation locally by entering ``make html``. 
-Documentation can be viewed by opening index.html.
+Documentation can be viewed by opening ``index.html``.
+
+The uml diagrams are built using PlantUML and Mermaid. 
+PlantUML requires Java to be installed.
+If you don't want to install Java, 
+you can comment out the PlantUML extension in ``conf.py`` and ``requirements.txt``  
+and remove all occurances of ``.. uml::`` in the documentation. 
+UML can also be created using Mermaid, which is a JavaScript based UML tool. 
+Mermaid does not require Java to be installed.
+A Mermaid diagram previewer for Visual Studio Code can be used to create the diagrams.
+A Mermaid live editor can be found `here <https://mermaid-js.github.io/mermaid-live-editor/>`_.
 
 Exporting and importing needs
 ------------------------------
