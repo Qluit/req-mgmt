@@ -30,11 +30,13 @@ jobs:
         pytest --junitxml=report.xml 
       continue-on-error: true # Continue as we know at least one test is failing
 
-    - name: Install Graphviz and LaTeX packages
+    - name: Install packages
       run: |
         sudo apt-get update -y
         sudo apt-get install -y graphviz
         sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+        sudo apt-get install -y nodejs npm
+        sudo npm install -g @mermaid-js/mermaid-cli
 
     - name: Check for missing needs links
       run: |
