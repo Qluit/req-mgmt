@@ -51,6 +51,10 @@ if not on_rtd:
     plantuml = ("java", "-jar", "../plantuml.jar")
 plantuml_output_format = "svg"
 
+# -- Options for Mermaid ----------------------------------------------------
+if on_rtd:
+    mermaid_params = ['-p' 'puppeteer-config.json']
+
 # -- Options for Graphviz ---------------------------------------------------
 graphviz_output_format = 'svg'
 
