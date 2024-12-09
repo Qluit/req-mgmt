@@ -11,6 +11,7 @@ Documentation is also built as PDF upon every pull request in the GitHub action.
 
 If you want to build this documentation yourself, you can clone the archive and build it.
 You need to run the tests in 'software/bmi' before the documentation can be built.
+(install pytest and run 'pytest --junit-xml=report.xml' in the 'software/bmi' directory)
 The manual on how to build the documentation can be found in the 'docs/source/usage.rst' file.
 
 The repository also contains example code for a BMI calculator in Java and C++.
